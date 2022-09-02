@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('backend/pages/dashboard/dashboard');
+});
+
+Route::controller(DashboardController::class,)->prefix('dashboard')->group(function(){
+    Route::get('/','dashboard')->name('admin.dashboard');
+    Route::get('/table','table')->name('admin.table');
 });
