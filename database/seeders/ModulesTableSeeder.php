@@ -6,7 +6,7 @@ use App\Models\Module;
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
-class PermissionTableSeeder extends Seeder
+class ModulesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -18,27 +18,27 @@ class PermissionTableSeeder extends Seeder
         $modules = [
             [
                 'name' => 'Dashboard',
-                'description' => 'Dashboard'
+                'slug' => 'dashboard'
             ],
             [
                 'name' => 'User',
-                'description' => 'User'
+                'slug' => 'user'
             ],
             [
                 'name' => 'Product',
-                'description' => 'Product'
+                'slug' => 'product'
             ],
             [
                 'name' => 'Category',
-                'description' => 'Category'
+                'slug' => 'category'
             ],
             [
                 'name' => 'Order',
-                'description' => 'Order'
+                'slug' => 'order'
             ],
             [
                 'name' => 'Role',
-                'description' => 'Role'
+                'slug' => 'role'
             ],
         ];
         foreach ($modules as $module) {
